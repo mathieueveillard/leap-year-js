@@ -1,17 +1,3 @@
-# js-kata-starter
+# Leap year
 
-Starter project for kata (Node, TypeScript, Jest)
-
-## Installation
-
-```text
-git clone https://github.com/mathieueveillard/js-kata-starter.git
-cd js-kata-starter
-npm install
-```
-
-## Development
-
-```text
-npm test
-```
+Write a function that returns true or false depending on whether its input is a leap year or not. A leap year is divisible by 4, but is not otherwise divisible by 100, unless it is also divisible by 400.
