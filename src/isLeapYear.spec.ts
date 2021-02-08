@@ -1,4 +1,4 @@
-import { isLeapYear } from ".";
+import { isLeapYear } from "./isLeapYear";
 
 describe("A leap year is divisible by 4", function () {
   it("should state that 2003 is NOT a leap year", function () {

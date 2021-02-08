@@ -1,9 +1,19 @@
-export function isLeapYear(year: number): boolean {
-  return (isMultipleOf(4)(year) && !isMultipleOf(100)(year)) || isMultipleOf(400)(year);
+import * as qoa from "qoa";
+import * as chalk from "chalk";
+import { isLeapYear } from "./isLeapYear";
+
+const input = {
+  type: "input",
+  query: "Year: ",
+  handle: "year",
+};
+
+function displayAnswer({ year }) {
+  console.log(
+    isLeapYear(year) //
+      ? chalk.green(`${year} is a leap year`)
+      : chalk.red(`${year} is NOT a leap year`)
+  );
 }
 
-function isMultipleOf(n: number) {
-  return function (year: number): boolean {
-    return year % n === 0;
-  };
-}
+qoa.prompt([input]).then(displayAnswer);
